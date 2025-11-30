@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forky</title>
+    <link rel="icon" type="image/png" href="images/top.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Forky Logo" class="logo"> 
+            </a>
+        </div>
+        <nav class="mode-switcher">
+            <button id="mode-a-btn" class="active"><i class="fas fa-utensils"></i> Search by Name</button>
+            <button id="mode-b-btn"><i class="fas fa-carrot"></i> Search by Ingredients</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div id="status-message" class="status-message hidden"></div>
+        <div id="loader" class="loader hidden"></div>
+
+        <section id="mode-a" class="mode-section">
+            <div class="search-bar floating-icon">
+                <input type="text" id="recipe-name-input" placeholder="e.g., Spaghetti Carbonara or Pizza">
+                <button id="search-name-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <div class="results-grid" id="name-results">
+                </div>
+        </section>
+
+        <section id="mode-b" class="mode-section hidden">
+            <div class="search-bar floating-icon">
+                <input type="text" id="ingredients-input" placeholder="e.g., Chicken, Rice, Onion (separate with commas)">
+                <button id="search-ingredients-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <div class="results-grid" id="ingredient-results">
+                </div>
+        </section>
+
+        <div id="recipe-details-overlay" class="overlay hidden">
+            <div class="recipe-content">
+                <button id="close-overlay-btn" class="close-btn"><i class="fas fa-times"></i></button>
+                <div id="recipe-details-inner">
+                    </div>
+            </div>
+        </div>
+        
+        <button id="favorites-btn" class="floating-btn" title="View Saved Recipes">
+            <i class="fas fa-star"></i>
+        </button>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
