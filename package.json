@@ -1,0 +1,8 @@
+{
+  "name": "forky-app",
+  "version": "1.0.0",
+  "description": "Forky Dual-Mode Recipe Explorer",
+  "dependencies": {
+    "node-fetch": "2.6.7"
+  }
+}
